@@ -1,0 +1,10 @@
+[package]
+name = "realityforge"
+version = "0.1.0"
+edition = "2021"
+description = "Transparent, deterministic REALITYFORGE review checklist"
+license = "MIT"
+
+[[bin]]
+name = "realityforge"
+path = "src/main.rs"

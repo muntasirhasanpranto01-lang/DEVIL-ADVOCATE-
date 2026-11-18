@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101114">
+  <meta name="description" content="A practical, offline-first devil's advocate and reality-check for ideas and plans.">
+  <title>REALITYFORGE — Reality over excitement</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="REALITYFORGE home"><span class="brand-mark">R</span><span>REALITY<span class="muted">FORGE</span></span></a>
+    <span class="offline"><span class="dot"></span> PRIVATE · OFFLINE READY</span>
+  </header>
+  <main>
+    <section class="hero">
+      <p class="eyebrow">INDEPENDENT IDEA REVIEW</p>
+      <h1>Reality over<br><span>excitement.</span></h1>
+      <p class="intro">Challenge the assumptions. Find the evidence. Build a plan that survives contact with reality.</p>
+    </section>
+    <section class="workspace" aria-label="Idea review">
+      <form id="review-form" class="panel input-panel">
+        <div class="panel-heading"><div><p class="eyebrow">01 / THE PROPOSAL</p><h2>What are we testing?</h2></div><span class="step">INPUT</span></div>
+        <label for="idea">Describe the idea, plan, or decision</label>
+        <textarea id="idea" rows="7" placeholder="What do you want to do? Who is it for, what problem does it solve, and what outcome do you expect?" required></textarea>
+        <div class="field-row">
+          <div class="field"><label for="mode">Review mode</label><select id="mode"><option value="devil">Devil mode — strongest case against</option><option value="investor">Investor mode — market & economics</option><option value="cto">CTO mode — technical feasibility</option><option value="auditor">Auditor mode — omissions & risks</option><option value="execution">Execution mode — milestones & gates</option></select></div>
+          <button type="submit" class="primary">Forge the review <span aria-hidden="true">↗</span></button>
+        </div>
+        <p class="privacy-note">Your text stays in this browser. The checklist is heuristic—not AI or verified research.</p>
+      </form>
+      <section id="result" class="panel result-panel" aria-live="polite" aria-label="Review results">
+        <div class="empty-state"><span class="empty-icon">◈</span><p class="eyebrow">02 / THE REALITY CHECK</p><h2>No assumptions spared.</h2><p>Your structured review will appear here. Start with a specific proposal; the more concrete it is, the more useful the questions.</p></div>
+      </section>
+    </section>
+    <section class="principles"><p class="eyebrow">THE STANDARD</p><div><span>01</span> EVIDENCE OVER ASSUMPTIONS</div><div><span>02</span> EXECUTION OVER FANTASY</div><div><span>03</span> CHALLENGE THE IDEA, NOT THE PERSON</div></section>
+  </main>
+  <footer><span>REALITYFORGE <span class="muted">· INDEPENDENT BY DESIGN</span></span><button id="clear-button" class="text-button" type="button">Clear saved review</button></footer>
+  <script src="app.js" defer></script>
+  <script>if ('serviceWorker' in navigator && location.protocol !== 'file:') navigator.serviceWorker.register('./sw.js').catch(() => {});</script>
+</body>
+</html>
